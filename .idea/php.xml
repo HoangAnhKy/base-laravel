@@ -1,34 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
+  <component name="MessDetectorOptionsConfiguration">
+    <option name="transferred" value="true" />
   </component>
-  <component name="ChangeListManager">
-    <list default="true" id="594f848f-c9b7-450f-b47d-c612461de3de" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
-    <option name="SHOW_DIALOG" value="false" />
-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
-    <option name="LAST_RESOLUTION" value="IGNORE" />
+  <component name="PHPCSFixerOptionsConfiguration">
+    <option name="transferred" value="true" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
-    <pharConfigPath>$PROJECT_DIR$/web/composer.json</pharConfigPath>
-    <execution />
+  <component name="PHPCodeSnifferOptionsConfiguration">
+    <option name="highlightLevel" value="WARNING" />
+    <option name="transferred" value="true" />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="NamedScopeManager">
-    <scope name="i18n Ally: Laravel/PHP source" pattern="file[school]:web/app//*&amp;&amp;!file[school]:web/app/Broadcasting//*&amp;&amp;!file[school]:web/app/Console//*&amp;&amp;!file[school]:web/app/Events//*&amp;&amp;!file[school]:web/app/Exceptions//*&amp;&amp;!file[school]:web/app/Models//*&amp;&amp;!file[school]:web/app/Providers//*" />
-    <scope name="i18n Ally: Laravel/Blade templates" pattern="file[school]:web/resources/views//*" />
-    <scope name="i18n Ally: Symfony/PHP source" pattern="file[school]:web/src//*&amp;&amp;!file[school]:web/src/DataFixtures//*" />
-    <scope name="i18n Ally: Symfony/Twig templates" pattern="file[school]:web/templates//*" />
-  </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\laragon\bin\php\php-8.1.10-Win32-vs16-x64\php.exe">
+  <component name="PhpIncludePathManager">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/league/config" />
       <path value="$PROJECT_DIR$/vendor/nette/utils" />
@@ -252,80 +234,18 @@
       <path value="$PROJECT_DIR$/web/vendor/composer" />
     </include_path>
   </component>
-  <component name="ProjectId" id="2nkkJJayN4QLth0pa1vNNXihHwb" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="1" id="Add" />
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.2">
+    <option name="suggestChangeDefaultLanguageLevel" value="false" />
   </component>
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
+  <component name="PhpStanOptionsConfiguration">
+    <option name="transferred" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.laravel-idea.search-composer-json&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.laravel-idea.update-module-directories&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/laragon/www/school/resources/views/Course&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
-    ]
-  }
-}</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\school\resources\views\Course" />
-      <recent name="C:\laragon\www\school\resources\views\User" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\school\public" />
-    </key>
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings configuration_file_path="$PROJECT_DIR$/web/phpunit.xml" custom_loader_path="$PROJECT_DIR$/web/vendor/autoload.php" use_configuration_file="true" />
+    </phpunit_settings>
   </component>
-  <component name="RunManager">
-    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner scope="XML" />
-      <method v="2" />
-    </configuration>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="594f848f-c9b7-450f-b47d-c612461de3de" name="Changes" comment="" />
-      <created>1729524391394</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1729524391394</updated>
-      <workItem from="1729524394855" duration="3815000" />
-      <workItem from="1729529149525" duration="150000" />
-      <workItem from="1729573461009" duration="11902000" />
-      <workItem from="1729591410491" duration="6387000" />
-      <workItem from="1729613368718" duration="8533000" />
-      <workItem from="1729664297286" duration="9435000" />
-      <workItem from="1729699717817" duration="4909000" />
-      <workItem from="1729735220009" duration="4998000" />
-      <workItem from="1729749944300" duration="10505000" />
-      <workItem from="1730044560803" duration="426000" />
-      <workItem from="1730075862795" duration="2588000" />
-      <workItem from="1730126133860" duration="27000" />
-      <workItem from="1730166542566" duration="3099000" />
-      <workItem from="1730170820762" duration="3165000" />
-      <workItem from="1730216722344" duration="279000" />
-      <workItem from="1730217733319" duration="522000" />
-      <workItem from="1730224686358" duration="1346000" />
-    </task>
-    <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+  <component name="PsalmOptionsConfiguration">
+    <option name="transferred" value="true" />
   </component>
 </project>
