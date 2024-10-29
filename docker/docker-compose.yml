@@ -1,0 +1,13 @@
+version: '4.3'
+
+services:
+  school-laravel:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    restart: unless-stopped
+    volumes:
+      - ../web:/var/www/html/
+      - ./apache/httpd.conf:/etc/httpd/conf/httpd.conf
