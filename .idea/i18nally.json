@@ -1,13 +1,13 @@
 {
   "version" : "1.2",
   "profiles" : [ {
-    "id" : "972d1eb5-cd2c-4d38-914e-c92141d6335e",
+    "id" : "eaee7c37-f77f-446c-97ee-28a86d91e96d",
     "name" : "Laravel (PHP, BLADE)",
     "keyNamingPattern" : "SNAKE_CASE_PATTERN",
     "sink" : {
-      "id" : "1c39620c-63f2-4ba8-b0c5-618f4bd87fe2",
+      "id" : "3138efb8-aaa0-4873-afad-da35df778906",
       "type" : "namespaced",
-      "translationsDirectory" : "$PROJECT_DIR$/web/vendor/nesbot/carbon/src/Carbon/Lang",
+      "translationsDirectory" : "$PROJECT_DIR$/vendor/nesbot/carbon/src/Carbon/Lang",
       "fileType" : "php",
       "defaultLocale" : "en",
       "namespaces" : [ "messages" ],
@@ -16,19 +16,19 @@
       "placeholderFormatterName" : "LARAVEL"
     },
     "sources" : [ {
-      "id" : "2d107a82-cf86-4560-95f6-4ae9ef9fdfd4",
+      "id" : "78423d11-5239-40ca-9e2e-2f4c6d7cbfe7",
       "type" : "php",
       "scopeName" : "i18n Ally: Laravel/PHP source",
-      "scopePattern" : "file[school]:web/app//*&&!file[school]:web/app/Broadcasting//*&&!file[school]:web/app/Console//*&&!file[school]:web/app/Events//*&&!file[school]:web/app/Exceptions//*&&!file[school]:web/app/Models//*&&!file[school]:web/app/Providers//*",
+      "scopePattern" : "file[school]:app//*&&!file[school]:app/Broadcasting//*&&!file[school]:app/Console//*&&!file[school]:app/Events//*&&!file[school]:app/Exceptions//*&&!file[school]:app/Models//*&&!file[school]:app/Providers//*",
       "defaultReplacementTemplate" : "trans('%namespace%.%key%', %map%)",
       "recognizedReplacementTemplates" : [ ],
       "skipDefaultNamespace" : false,
       "sprintfMode" : false
     }, {
-      "id" : "bca3670d-c6ae-4e9e-8373-f3dd91c2e0aa",
+      "id" : "4063cab0-c44f-4951-890d-1df26c342a0e",
       "type" : "blade",
       "scopeName" : "i18n Ally: Laravel/Blade templates",
-      "scopePattern" : "file[school]:web/resources/views//*",
+      "scopePattern" : "file[school]:resources/views//*",
       "defaultReplacementTemplate" : "trans('%namespace%.%key%', %map%)",
       "attributeReplacementTemplate" : "",
       "inlineTagsReplacementTemplate" : "",
@@ -38,13 +38,13 @@
       "skipDefaultNamespace" : false
     } ]
   }, {
-    "id" : "3751d1c8-5a3c-4114-98e8-6f4689dd164d",
+    "id" : "5ad47fc0-8594-4541-bc97-088a8c652afc",
     "name" : "Symfony (PHP, TWIG)",
     "keyNamingPattern" : "SNAKE_CASE_PATTERN",
     "sink" : {
-      "id" : "d53058d5-7ce6-4478-9f84-aa339c954524",
+      "id" : "3a3f8c49-580d-4a12-9c81-e758055f8276",
       "type" : "namespaced",
-      "translationsDirectory" : "$PROJECT_DIR$/web/vendor/nesbot/carbon/src/Carbon/Lang",
+      "translationsDirectory" : "$PROJECT_DIR$/vendor/nesbot/carbon/src/Carbon/Lang",
       "fileType" : "php",
       "defaultLocale" : "en",
       "namespaces" : [ "messages" ],
@@ -53,19 +53,19 @@
       "placeholderFormatterName" : "SYMFONY_REPLACEMENT"
     },
     "sources" : [ {
-      "id" : "0caba947-3d1e-4981-bd3b-73c3258eb8d4",
+      "id" : "5be75491-4362-4da0-a054-b65bf07aebef",
       "type" : "php",
       "scopeName" : "i18n Ally: Symfony/PHP source",
-      "scopePattern" : "file[school]:web/src//*&&!file[school]:web/src/DataFixtures//*",
+      "scopePattern" : "file[school]:src//*&&!file[school]:src/DataFixtures//*",
       "defaultReplacementTemplate" : "$this->translator->trans('%key%', %map%, '%namespace%')",
       "recognizedReplacementTemplates" : [ ],
       "skipDefaultNamespace" : true,
       "sprintfMode" : false
     }, {
-      "id" : "496ca85c-d3e5-47f5-85a0-028665b2f7bd",
+      "id" : "5c8ad869-1f86-4484-bc74-b408c263af12",
       "type" : "twig",
       "scopeName" : "i18n Ally: Symfony/Twig templates",
-      "scopePattern" : "file[school]:web/templates//*",
+      "scopePattern" : "file[school]:templates//*",
       "defaultReplacementTemplate" : "trans(%map%, '%namespace%')",
       "attributeReplacementTemplate" : "",
       "inlineTagsReplacementTemplate" : "trans(%map%, '%namespace%')|raw",

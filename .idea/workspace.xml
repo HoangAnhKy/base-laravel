@@ -1,10 +1,156 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="594f848f-c9b7-450f-b47d-c612461de3de" name="Changes" comment="" />
+    <list default="true" id="6fd9e064-7729-40dc-a0f0-082b6d8ce4ba" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/blade.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/i18nally.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/laravel-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel-idea.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/apache/httpd.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/.env.example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/Http/Controllers/Controller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/Http/Controllers/CourseDetailController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/Http/Controllers/CoursesController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/Http/Controllers/UsersController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/Http/Middleware/checkAUTH.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/Http/Requests/StoreCourseDetailRequest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/Http/Requests/StoreCoursesRequest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/Http/Requests/StoreUsersRequest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/Http/Requests/UpdateCourseDetailRequest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/Http/Requests/UpdateCoursesRequest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/Http/Requests/UpdateUsersRequest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/Library/CourseLibrary.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/Library/UserLibrary.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/Models/CourseDetail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/Models/Courses.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/Models/Table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/Models/Users.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/Policies/CourseDetailPolicy.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/Policies/CoursesPolicy.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/Policies/UsersPolicy.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/Providers/AppServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/artisan" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/bootstrap/app.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/bootstrap/cache/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/bootstrap/providers.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/composer.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/config/app.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/config/auth.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/config/cache.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/config/database.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/config/define.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/config/filesystems.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/config/logging.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/config/mail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/config/queue.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/config/services.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/config/session.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/database/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/database/factories/CourseDetailFactory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/database/factories/CoursesFactory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/database/factories/UsersFactory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/database/migrations/2024_10_21_091534_create_courses_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/database/migrations/2024_10_21_091539_create_users_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/database/migrations/2024_10_23_174953_create_course_details_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/database/seeders/CourseDetailSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/database/seeders/CoursesSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/database/seeders/DatabaseSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/database/seeders/UsersSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/phpunit.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/postcss.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/.htaccess" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap-grid.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap-grid.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap-grid.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap-grid.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap-reboot.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap-reboot.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap-reboot.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap-reboot.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap-utilities.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap-utilities.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap-utilities.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap-utilities.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap-utilities.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap-utilities.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap-utilities.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap-utilities.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.esm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.esm.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.esm.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.esm.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/css/app.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/js/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/views/Course/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/views/Course/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/views/Course/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/views/Course/viewDetail.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/views/Layout/404.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/views/Layout/default.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/views/Layout/menu.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/views/Layout/notification.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/views/Layout/viewall.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/views/User/Create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/views/User/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/views/User/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/views/User/login.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/routes/console.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/routes/web.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/storage/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/storage/app/private/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/storage/app/public/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/storage/debugbar/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/storage/framework/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/storage/framework/cache/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/storage/framework/cache/data/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/storage/framework/sessions/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/storage/framework/testing/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/storage/framework/views/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/storage/logs/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/tailwind.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/tests/Feature/ExampleTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/tests/TestCase.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/tests/Unit/ExampleTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/vite.config.js" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,234 +172,8 @@
     <scope name="i18n Ally: Symfony/PHP source" pattern="file[school]:web/src//*&amp;&amp;!file[school]:web/src/DataFixtures//*" />
     <scope name="i18n Ally: Symfony/Twig templates" pattern="file[school]:web/templates//*" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\laragon\bin\php\php-8.1.10-Win32-vs16-x64\php.exe">
-    <include_path>
-      <path value="$PROJECT_DIR$/vendor/league/config" />
-      <path value="$PROJECT_DIR$/vendor/nette/utils" />
-      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
-      <path value="$PROJECT_DIR$/vendor/brick/math" />
-      <path value="$PROJECT_DIR$/vendor/nette/schema" />
-      <path value="$PROJECT_DIR$/vendor/filp/whoops" />
-      <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
-      <path value="$PROJECT_DIR$/vendor/psr/log" />
-      <path value="$PROJECT_DIR$/vendor/psy/psysh" />
-      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
-      <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
-      <path value="$PROJECT_DIR$/vendor/psr/container" />
-      <path value="$PROJECT_DIR$/vendor/psr/http-client" />
-      <path value="$PROJECT_DIR$/vendor/psr/clock" />
-      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
-      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
-      <path value="$PROJECT_DIR$/vendor/composer" />
-      <path value="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" />
-      <path value="$PROJECT_DIR$/vendor/graham-campbell/result-type" />
-      <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
-      <path value="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
-      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
-      <path value="$PROJECT_DIR$/vendor/nunomaduro/termwind" />
-      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
-      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
-      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
-      <path value="$PROJECT_DIR$/vendor/guzzlehttp/uri-template" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/complexity" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/cli-parser" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/lines-of-code" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/type" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
-      <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
-      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
-      <path value="$PROJECT_DIR$/vendor/carbonphp/carbon-doctrine-types" />
-      <path value="$PROJECT_DIR$/vendor/fruitcake/php-cors" />
-      <path value="$PROJECT_DIR$/vendor/fakerphp/faker" />
-      <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
-      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
-      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-uuid" />
-      <path value="$PROJECT_DIR$/vendor/symfony/process" />
-      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
-      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
-      <path value="$PROJECT_DIR$/vendor/symfony/string" />
-      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
-      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
-      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
-      <path value="$PROJECT_DIR$/vendor/symfony/uid" />
-      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
-      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
-      <path value="$PROJECT_DIR$/vendor/symfony/console" />
-      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
-      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
-      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
-      <path value="$PROJECT_DIR$/vendor/symfony/mailer" />
-      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php83" />
-      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
-      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
-      <path value="$PROJECT_DIR$/vendor/symfony/clock" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-invoker" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
-      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
-      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
-      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
-      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
-      <path value="$PROJECT_DIR$/vendor/laravel/pint" />
-      <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
-      <path value="$PROJECT_DIR$/vendor/laravel/tinker" />
-      <path value="$PROJECT_DIR$/vendor/laravel/serializable-closure" />
-      <path value="$PROJECT_DIR$/vendor/laravel/framework" />
-      <path value="$PROJECT_DIR$/vendor/laravel/pail" />
-      <path value="$PROJECT_DIR$/vendor/laravel/prompts" />
-      <path value="$PROJECT_DIR$/vendor/dflydev/dot-access-data" />
-      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
-      <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
-      <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
-      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
-      <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
-      <path value="$PROJECT_DIR$/vendor/league/flysystem" />
-      <path value="$PROJECT_DIR$/vendor/league/flysystem-local" />
-      <path value="$PROJECT_DIR$/vendor/league/commonmark" />
-      <path value="$PROJECT_DIR$/vendor/league/mime-type-detection" />
-      <path value="$PROJECT_DIR$/vendor/maximebf/debugbar" />
-      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar" />
-      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
-      <path value="$PROJECT_DIR$/vendor/laravel/sail" />
-      <path value="$PROJECT_DIR$/web/vendor/psr/clock" />
-      <path value="$PROJECT_DIR$/web/vendor/psr/container" />
-      <path value="$PROJECT_DIR$/web/vendor/psr/event-dispatcher" />
-      <path value="$PROJECT_DIR$/web/vendor/psr/http-client" />
-      <path value="$PROJECT_DIR$/web/vendor/psr/http-factory" />
-      <path value="$PROJECT_DIR$/web/vendor/psr/http-message" />
-      <path value="$PROJECT_DIR$/web/vendor/psr/log" />
-      <path value="$PROJECT_DIR$/web/vendor/psr/simple-cache" />
-      <path value="$PROJECT_DIR$/web/vendor/psy/psysh" />
-      <path value="$PROJECT_DIR$/web/vendor/filp/whoops" />
-      <path value="$PROJECT_DIR$/web/vendor/voku/portable-ascii" />
-      <path value="$PROJECT_DIR$/web/vendor/brick/math" />
-      <path value="$PROJECT_DIR$/web/vendor/nette/schema" />
-      <path value="$PROJECT_DIR$/web/vendor/nette/utils" />
-      <path value="$PROJECT_DIR$/web/vendor/nikic/php-parser" />
-      <path value="$PROJECT_DIR$/web/vendor/league/commonmark" />
-      <path value="$PROJECT_DIR$/web/vendor/league/config" />
-      <path value="$PROJECT_DIR$/web/vendor/league/flysystem" />
-      <path value="$PROJECT_DIR$/web/vendor/league/flysystem-local" />
-      <path value="$PROJECT_DIR$/web/vendor/league/mime-type-detection" />
-      <path value="$PROJECT_DIR$/web/vendor/nesbot/carbon" />
-      <path value="$PROJECT_DIR$/web/vendor/ramsey/collection" />
-      <path value="$PROJECT_DIR$/web/vendor/ramsey/uuid" />
-      <path value="$PROJECT_DIR$/web/vendor/vlucas/phpdotenv" />
-      <path value="$PROJECT_DIR$/web/vendor/dflydev/dot-access-data" />
-      <path value="$PROJECT_DIR$/web/vendor/egulias/email-validator" />
-      <path value="$PROJECT_DIR$/web/vendor/laravel/framework" />
-      <path value="$PROJECT_DIR$/web/vendor/laravel/pail" />
-      <path value="$PROJECT_DIR$/web/vendor/laravel/pint" />
-      <path value="$PROJECT_DIR$/web/vendor/laravel/prompts" />
-      <path value="$PROJECT_DIR$/web/vendor/laravel/sail" />
-      <path value="$PROJECT_DIR$/web/vendor/laravel/serializable-closure" />
-      <path value="$PROJECT_DIR$/web/vendor/laravel/tinker" />
-      <path value="$PROJECT_DIR$/web/vendor/mockery/mockery" />
-      <path value="$PROJECT_DIR$/web/vendor/monolog/monolog" />
-      <path value="$PROJECT_DIR$/web/vendor/myclabs/deep-copy" />
-      <path value="$PROJECT_DIR$/web/vendor/phar-io/manifest" />
-      <path value="$PROJECT_DIR$/web/vendor/phar-io/version" />
-      <path value="$PROJECT_DIR$/web/vendor/phpunit/php-code-coverage" />
-      <path value="$PROJECT_DIR$/web/vendor/phpunit/php-file-iterator" />
-      <path value="$PROJECT_DIR$/web/vendor/phpunit/php-invoker" />
-      <path value="$PROJECT_DIR$/web/vendor/phpunit/php-text-template" />
-      <path value="$PROJECT_DIR$/web/vendor/phpunit/php-timer" />
-      <path value="$PROJECT_DIR$/web/vendor/phpunit/phpunit" />
-      <path value="$PROJECT_DIR$/web/vendor/symfony/clock" />
-      <path value="$PROJECT_DIR$/web/vendor/symfony/console" />
-      <path value="$PROJECT_DIR$/web/vendor/symfony/css-selector" />
-      <path value="$PROJECT_DIR$/web/vendor/symfony/deprecation-contracts" />
-      <path value="$PROJECT_DIR$/web/vendor/symfony/error-handler" />
-      <path value="$PROJECT_DIR$/web/vendor/symfony/event-dispatcher" />
-      <path value="$PROJECT_DIR$/web/vendor/symfony/event-dispatcher-contracts" />
-      <path value="$PROJECT_DIR$/web/vendor/symfony/finder" />
-      <path value="$PROJECT_DIR$/web/vendor/symfony/http-foundation" />
-      <path value="$PROJECT_DIR$/web/vendor/symfony/http-kernel" />
-      <path value="$PROJECT_DIR$/web/vendor/symfony/mailer" />
-      <path value="$PROJECT_DIR$/web/vendor/symfony/mime" />
-      <path value="$PROJECT_DIR$/web/vendor/symfony/polyfill-ctype" />
-      <path value="$PROJECT_DIR$/web/vendor/symfony/polyfill-intl-grapheme" />
-      <path value="$PROJECT_DIR$/web/vendor/symfony/polyfill-intl-idn" />
-      <path value="$PROJECT_DIR$/web/vendor/symfony/polyfill-intl-normalizer" />
-      <path value="$PROJECT_DIR$/web/vendor/symfony/polyfill-mbstring" />
-      <path value="$PROJECT_DIR$/web/vendor/symfony/polyfill-php80" />
-      <path value="$PROJECT_DIR$/web/vendor/symfony/polyfill-php83" />
-      <path value="$PROJECT_DIR$/web/vendor/symfony/polyfill-uuid" />
-      <path value="$PROJECT_DIR$/web/vendor/symfony/process" />
-      <path value="$PROJECT_DIR$/web/vendor/symfony/routing" />
-      <path value="$PROJECT_DIR$/web/vendor/symfony/service-contracts" />
-      <path value="$PROJECT_DIR$/web/vendor/symfony/string" />
-      <path value="$PROJECT_DIR$/web/vendor/symfony/translation" />
-      <path value="$PROJECT_DIR$/web/vendor/symfony/translation-contracts" />
-      <path value="$PROJECT_DIR$/web/vendor/symfony/uid" />
-      <path value="$PROJECT_DIR$/web/vendor/symfony/var-dumper" />
-      <path value="$PROJECT_DIR$/web/vendor/symfony/yaml" />
-      <path value="$PROJECT_DIR$/web/vendor/theseer/tokenizer" />
-      <path value="$PROJECT_DIR$/web/vendor/barryvdh/laravel-debugbar" />
-      <path value="$PROJECT_DIR$/web/vendor/doctrine/inflector" />
-      <path value="$PROJECT_DIR$/web/vendor/doctrine/lexer" />
-      <path value="$PROJECT_DIR$/web/vendor/fakerphp/faker" />
-      <path value="$PROJECT_DIR$/web/vendor/hamcrest/hamcrest-php" />
-      <path value="$PROJECT_DIR$/web/vendor/maximebf/debugbar" />
-      <path value="$PROJECT_DIR$/web/vendor/carbonphp/carbon-doctrine-types" />
-      <path value="$PROJECT_DIR$/web/vendor/fruitcake/php-cors" />
-      <path value="$PROJECT_DIR$/web/vendor/phpoption/phpoption" />
-      <path value="$PROJECT_DIR$/web/vendor/ralouphie/getallheaders" />
-      <path value="$PROJECT_DIR$/web/vendor/sebastian/cli-parser" />
-      <path value="$PROJECT_DIR$/web/vendor/sebastian/code-unit" />
-      <path value="$PROJECT_DIR$/web/vendor/sebastian/code-unit-reverse-lookup" />
-      <path value="$PROJECT_DIR$/web/vendor/sebastian/comparator" />
-      <path value="$PROJECT_DIR$/web/vendor/sebastian/complexity" />
-      <path value="$PROJECT_DIR$/web/vendor/sebastian/diff" />
-      <path value="$PROJECT_DIR$/web/vendor/sebastian/environment" />
-      <path value="$PROJECT_DIR$/web/vendor/sebastian/exporter" />
-      <path value="$PROJECT_DIR$/web/vendor/sebastian/global-state" />
-      <path value="$PROJECT_DIR$/web/vendor/sebastian/lines-of-code" />
-      <path value="$PROJECT_DIR$/web/vendor/sebastian/object-enumerator" />
-      <path value="$PROJECT_DIR$/web/vendor/sebastian/object-reflector" />
-      <path value="$PROJECT_DIR$/web/vendor/sebastian/recursion-context" />
-      <path value="$PROJECT_DIR$/web/vendor/sebastian/type" />
-      <path value="$PROJECT_DIR$/web/vendor/sebastian/version" />
-      <path value="$PROJECT_DIR$/web/vendor/webmozart/assert" />
-      <path value="$PROJECT_DIR$/web/vendor/guzzlehttp/guzzle" />
-      <path value="$PROJECT_DIR$/web/vendor/guzzlehttp/promises" />
-      <path value="$PROJECT_DIR$/web/vendor/guzzlehttp/psr7" />
-      <path value="$PROJECT_DIR$/web/vendor/guzzlehttp/uri-template" />
-      <path value="$PROJECT_DIR$/web/vendor/nunomaduro/collision" />
-      <path value="$PROJECT_DIR$/web/vendor/nunomaduro/termwind" />
-      <path value="$PROJECT_DIR$/web/vendor/tijsverkoyen/css-to-inline-styles" />
-      <path value="$PROJECT_DIR$/web/vendor/dragonmantank/cron-expression" />
-      <path value="$PROJECT_DIR$/web/vendor/graham-campbell/result-type" />
-      <path value="$PROJECT_DIR$/web/vendor/composer" />
-    </include_path>
-  </component>
-  <component name="ProjectId" id="2nkkJJayN4QLth0pa1vNNXihHwb" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\laragon\bin\php\php-8.1.10-Win32-vs16-x64\php.exe" />
+  <component name="ProjectId" id="2o9Ai6NwvVxMzgdDjDf3nOyRWWv" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -263,33 +183,17 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.laravel-idea.search-composer-json&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.laravel-idea.update-module-directories&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/laragon/www/school/resources/views/Course&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
-    ]
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\school\resources\views\Course" />
-      <recent name="C:\laragon\www\school\resources\views\User" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\school\public" />
-    </key>
-  </component>
   <component name="RunManager">
+    <configuration default="true" type="ComposerRunConfigurationType" factoryName="Composer Script">
+      <option name="pathToComposerJson" value="$PROJECT_DIR$/web/composer.json" />
+      <method v="2" />
+    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
@@ -298,28 +202,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="594f848f-c9b7-450f-b47d-c612461de3de" name="Changes" comment="" />
-      <created>1729524391394</created>
+      <changelist id="6fd9e064-7729-40dc-a0f0-082b6d8ce4ba" name="Changes" comment="" />
+      <created>1730271544049</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1729524391394</updated>
-      <workItem from="1729524394855" duration="3815000" />
-      <workItem from="1729529149525" duration="150000" />
-      <workItem from="1729573461009" duration="11902000" />
-      <workItem from="1729591410491" duration="6387000" />
-      <workItem from="1729613368718" duration="8533000" />
-      <workItem from="1729664297286" duration="9435000" />
-      <workItem from="1729699717817" duration="4909000" />
-      <workItem from="1729735220009" duration="4998000" />
-      <workItem from="1729749944300" duration="10505000" />
-      <workItem from="1730044560803" duration="426000" />
-      <workItem from="1730075862795" duration="2588000" />
-      <workItem from="1730126133860" duration="27000" />
-      <workItem from="1730166542566" duration="3099000" />
-      <workItem from="1730170820762" duration="3165000" />
-      <workItem from="1730216722344" duration="279000" />
-      <workItem from="1730217733319" duration="522000" />
-      <workItem from="1730224686358" duration="1738000" />
+      <updated>1730271544049</updated>
+      <workItem from="1730271549371" duration="139000" />
     </task>
     <servers />
   </component>
