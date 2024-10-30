@@ -1,10 +1,19 @@
-name: Hello World
+name: Deploy to VM
+
 on:
   push:
-    branches: [master]
+    branches:
+      - master
+
 jobs:
-  say-hello:
-    runs-on: ubuntu-latest
+  deploy:
+    runs-on: self-hosted
+
     steps:
-      - name: Say Hello
-        run: echo "hello world"
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Deploy
+        run: |
+          cd /var/www/html/base-laravel &&
+          git pull origin master
