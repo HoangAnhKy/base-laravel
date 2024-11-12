@@ -12,6 +12,7 @@ class Users extends Table implements AuthenticatableContract
     use Authenticatable;
 
     public $fillable = ["name_user", "birthdate", "email", "password", "position"];
+    public static $redis_key = "table_user_";
     public static $condition = ["users.del_flag" => UNDEL];
 
 

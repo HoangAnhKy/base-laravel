@@ -1,19 +1,19 @@
-name: Deploy to VM
-
-on:
-  push:
-    branches:
-      - master
-
-jobs:
-  deploy:
-    runs-on: self-hosted
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Deploy
-        run: |
-          cd /var/www/html/base-laravel &&
-          git pull origin master
+#name: Deploy to VM
+#
+#on:
+#  push:
+#    branches:
+#      - master
+#
+#jobs:
+#  deploy:
+#    runs-on: self-hosted
+#
+#    steps:
+#      - name: Checkout code
+#        uses: actions/checkout@v3
+#
+#      - name: Deploy
+#        run: |
+#          cd /var/www/html/base-laravel &&
+#          git pull origin master

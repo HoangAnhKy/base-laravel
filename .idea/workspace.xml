@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6fd9e064-7729-40dc-a0f0-082b6d8ce4ba" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/laravel.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/laravel.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Layout/default.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Layout/default.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/CourseDetail.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/CourseDetail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Courses.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Courses.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Table.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,6 +148,7 @@
       <path value="$PROJECT_DIR$/vendor/psr/container" />
       <path value="$PROJECT_DIR$/vendor/psr/clock" />
       <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/predis/predis" />
     </include_path>
   </component>
   <component name="ProjectId" id="2o9Ai6NwvVxMzgdDjDf3nOyRWWv" />
