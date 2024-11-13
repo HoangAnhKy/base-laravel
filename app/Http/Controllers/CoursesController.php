@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreCourseDetailRequest;
+use App\Jobs\registerCouser;
 use App\Library\CourseLibrary;
 use App\Library\UserLibrary;
 use App\Models\CourseDetail;
@@ -11,6 +12,7 @@ use App\Http\Requests\StoreCoursesRequest;
 use App\Http\Requests\UpdateCoursesRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redis;
 use Illuminate\Validation\Rule;
 
 class CoursesController extends Controller
@@ -81,8 +83,24 @@ class CoursesController extends Controller
 
 
     public function register($course = null, StoreCourseDetailRequest $request){
-        if (isset($course) && is_numeric($course) && CourseDetail::saveDB($request->validated())) {
-            return redirect()->route("courses.index")->with("success", "Register Course success");
+        if (isset($course) && is_numeric($course)) {
+
+            try {
+
+                $lockKey = "register_course_lock_{$course}_{$request["student_id"]}";
+
+                $lock = Redis::set($lockKey, true, 'EX', 60, 'NX');
+
+                if (!$lock) {
+                    return redirect()->route("courses.index")->with("error", "Cannot register course ");
+                }
+
+                registerCouser::dispatch($request->validated())->delay(now()->addMinutes(1));
+                return redirect()->route("courses.index")->with("success", "Register Course success");
+            } catch (\Exception $e) {
+                return redirect()->route("courses.index")->with("error", "Cannot register course: " . $e->getMessage());
+            }
+
         }
         return redirect()->route("courses.index")->with("error", "Cannot find Course");
     }
