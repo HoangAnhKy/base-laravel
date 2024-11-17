@@ -2,7 +2,11 @@
 
 namespace App\Jobs;
 
+use App\Events\MyEvent;
+use App\Library\CourseLibrary;
 use App\Models\CourseDetail;
+use App\Models\notification;
+use App\Models\Users;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Queue\Queueable;
 use Illuminate\Support\Facades\Log;
@@ -12,13 +16,17 @@ class registerCouser implements ShouldQueue
     use Queueable;
 
     protected $data;
+    protected $user;
+    protected $teacher;
 
     /**
      * Create a new job instance.
      */
-    public function __construct($data)
+    public function __construct($data, $userID, $teacher)
     {
         $this->data = $data;
+        $this->user = $userID;
+        $this->teacher = $teacher;
     }
 
     /**
@@ -26,10 +34,18 @@ class registerCouser implements ShouldQueue
      */
     public function handle(): void
     {
-        CourseDetail::saveDB($this->data);
+        try {
+            $courseDetail = new CourseLibrary();
+            $courseDetail->registerCourse($this->data, $this->user, $this->teacher);
+        }catch (\Exception $exception){
+
+            Log::error('Error in registerCouser Job: ' . $exception->getMessage());
+            throw $exception; // Để job thất bại và được ghi vào queue failed
+        }
+
     }
 
-    public function failed(Exception $exception)
+    public function failed(\Exception $exception)
     {
         // Xử lý khi job thất bại
         Log::error('Job failed permanently: ' . $exception->getMessage());

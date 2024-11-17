@@ -22,6 +22,8 @@ class CoursesController extends Controller
 
     public function __construct()
     {
+        parent::__construct();
+
         $this->lib_course = new CourseLibrary();
 
         $this->lib_user = new UserLibrary();
@@ -87,6 +89,7 @@ class CoursesController extends Controller
 
             try {
 
+                $teacher_id = Courses::selectOne(["id" => $course],[], ["teacher_id"])->teacher_id ?? null;
                 $lockKey = "register_course_lock_{$course}_{$request["student_id"]}";
 
                 $lock = Redis::set($lockKey, true, 'EX', 60, 'NX');
@@ -95,7 +98,8 @@ class CoursesController extends Controller
                     return redirect()->route("courses.index")->with("error", "Cannot register course ");
                 }
 
-                registerCouser::dispatch($request->validated())->delay(now()->addMinutes(1));
+//                registerCouser::dispatch($request->validated(), \auth()->id(), (int)$teacher_id)->delay(now()->addMinutes(1));
+                registerCouser::dispatch($request->validated(), \auth()->id(), (int)$teacher_id);
                 return redirect()->route("courses.index")->with("success", "Register Course success");
             } catch (\Exception $e) {
                 return redirect()->route("courses.index")->with("error", "Cannot register course: " . $e->getMessage());

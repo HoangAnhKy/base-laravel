@@ -45,6 +45,30 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js"></script>
 <script src="{{ asset("bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.min.js") }}"></script>
+
+<script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>
+<script>
+
+    Pusher.logToConsole = true;
+
+    var pusher = new Pusher('9d0c4a69c464e0fef453', {
+        cluster: 'ap1',
+        authEndpoint: '/broadcasting/auth', // private
+        auth: {
+            headers: {
+                'X-CSRF-TOKEN': '{{ csrf_token() }}' // Nếu cần thiết, gửi CSRF token
+            }
+        }
+    });
+
+    // var channel = pusher.subscribe('my-channel');
+    var channel = pusher.subscribe('private-App.Models.User.{{ auth()->user()->id }}');
+
+    channel.bind('my-event', function(data) {
+        alert(data.message);
+    });
+</script>
+
 <script>
     $(document).ready(function () {
         $.validator.setDefaults({

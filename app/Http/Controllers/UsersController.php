@@ -14,6 +14,8 @@ class UsersController extends Controller
     private $lib_user;
     public function __construct()
     {
+        parent::__construct();
+
         $this->lib_user = new UserLibrary();
     }
 

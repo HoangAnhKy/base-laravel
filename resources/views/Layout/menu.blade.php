@@ -1,8 +1,15 @@
 <div class="w-100">
-    <div class="mt-4 text-center">
-        <h5>{{ auth()->user()->name_user ?? "" }}</h5>
+    <div class="row mt-4 text-center">
+        <div class=" col-10">
+            <h5>{{ auth()->user()->name_user ?? "" }}</h5>
+        </div>
+        <div class="col-2 position-relative">
+            <i class="fa-regular fa-bell"></i>
+            <span class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-danger" style="left: 20px !important;">
+                    {{ $count_notification ?? 0}}
+          </span>
+        </div>
     </div>
-
     <hr/>
     <div>
         <ul class="list-group-custom">

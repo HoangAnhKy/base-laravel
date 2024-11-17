@@ -2,8 +2,10 @@
 
 namespace App\Library;
 
+use App\Events\MyEvent;
 use App\Models\CourseDetail;
 use App\Models\Courses;
+use App\Models\notification;
 use App\Models\Users;
 use Illuminate\Validation\Rule;
 
@@ -20,9 +22,10 @@ class CourseLibrary
         return $filter;
     }
 
-    public function getSearch(){
+    public function getSearch()
+    {
         $search = [];
-        if (!empty($_GET["key_search"])){
+        if (!empty($_GET["key_search"])) {
             $key_search = $_GET["key_search"];
             $search["AND"] = [
             ];
@@ -33,7 +36,8 @@ class CourseLibrary
         return $search;
     }
 
-    public function delete($request, $course = null){
+    public function delete($request, $course = null)
+    {
         if (isset($course) && is_numeric($course)) {
 
             $request->merge([
@@ -50,16 +54,17 @@ class CourseLibrary
 
             unset($validate["course_id"]);
 
-            if (Courses::updateDB(["id" => $course], $validate)){
+            if (Courses::updateDB(["id" => $course], $validate)) {
                 return true;
             }
         }
         return false;
     }
 
-    public function checkStudentInCourse($request){
+    public function checkStudentInCourse($request)
+    {
         $status = false;
-        if ($request->ajax()){
+        if ($request->ajax()) {
             $student_id = $request->get("student_id");
             $course_id = $request->get("course_id");
 
@@ -72,6 +77,26 @@ class CourseLibrary
             $status = empty($course_detail);
         }
         return response()->json($status);
+    }
+
+    public function registerCourse($data, $userID, $teacherID)
+    {
+        CourseDetail::saveDB($data);
+        $user = Users::find($userID);
+
+        if ($user->id !== $teacherID) {
+            $message = $user->name_user . " join course";
+
+            $db_notification = [
+                "messenger" => $message,
+                "user_id" => $teacherID,
+                "link" => BASE_URL . "/course/course-detail/1",
+            ];
+
+            notification::saveDB($db_notification);
+
+            event(new MyEvent($message, $teacherID));
+        }
     }
 
 }

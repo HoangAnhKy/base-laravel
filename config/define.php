@@ -24,3 +24,8 @@ define("LIST_STATUS", [
     INACTIVE => "In Active",
     ACTIVE => "Active"
 ]);
+
+
+define("READ", 1);
+define("UNREAD", 0);
+define("BASE_URL", "https://school.local.com");
