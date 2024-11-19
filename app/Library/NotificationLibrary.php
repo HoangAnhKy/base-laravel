@@ -7,7 +7,7 @@ use App\Models\notification;
 class NotificationLibrary
 {
     public function getNotification(){
-        return notification::selectALL(["user_id" => auth()->id()], [],[],[["status", "ASC"], ["created_at", "DESC"]]) ?? [];
+        return notification::selectALL(["user_id" => auth()->id()], [],[],[["created_at", "DESC"]]) ?? [];
     }
 
     public function readNotification($data_request = []){

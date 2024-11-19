@@ -68,12 +68,14 @@
         });
 
         // var channel = pusher.subscribe('my-channel');
-        var channel = pusher.subscribe('private-App.Models.User.{{ auth()->user()->id }}');
+        @if(auth()->check())
+            var channel = pusher.subscribe('private-App.Models.User.{{ auth()->user()->id }}');
 
-        channel.bind('my-event', function (data) {
-            //     alert(data.message);
-            changeNotification(data);
-        });
+            channel.bind('my-event', function (data) {
+                //     alert(data.message);
+                changeNotification(data);
+            });
+        @endif
 
         const changeNotification = (data) => {
             data = JSON.parse(data.message);
