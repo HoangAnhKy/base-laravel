@@ -95,7 +95,7 @@ class CourseLibrary
 
             notification::saveDB($db_notification);
 
-            event(new MyEvent($message, $teacherID));
+            event(new MyEvent(json_encode($db_notification), $teacherID));
         }
     }
 

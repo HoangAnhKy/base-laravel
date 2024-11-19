@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Controller;
 use App\Http\Controllers\CoursesController;
 use App\Http\Controllers\UsersController;
 use App\Http\Middleware\checkAUTH;
@@ -34,3 +35,4 @@ Route::fallback(function (){
    return view("Layout.404");
 });
 
+Route::get("api/read-notification/", [CoursesController::class, "APIReadnotification"])->name("api-read-notification");

@@ -7,20 +7,15 @@
     <list default="true" id="6fd9e064-7729-40dc-a0f0-082b6d8ce4ba" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CourseDetailController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CourseDetailController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CoursesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CoursesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Jobs/registerCouser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/registerCouser.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Library/CourseLibrary.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Library/CourseLibrary.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/providers.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/providers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Library/NotificationLibrary.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Library/NotificationLibrary.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Table.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/define.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/define.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Layout/default.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Layout/default.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Layout/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Layout/menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Layout/notification.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Layout/notification.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +212,11 @@
       <workItem from="1731502793731" duration="5987000" />
       <workItem from="1731728666023" duration="19814000" />
       <workItem from="1731778609821" duration="955000" />
-      <workItem from="1731834349074" duration="3685000" />
+      <workItem from="1731834349074" duration="4020000" />
+      <workItem from="1731946530864" duration="138000" />
+      <workItem from="1731948657331" duration="962000" />
+      <workItem from="1731978615810" duration="7267000" />
+      <workItem from="1732024471833" duration="6716000" />
     </task>
     <servers />
   </component>

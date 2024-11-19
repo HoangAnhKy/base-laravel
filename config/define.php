@@ -1,6 +1,7 @@
 <?php
 
 define("LIMIT", 10);
+define("APP_CACHE", true);
 define("POST", "POST");
 define("GET", "GET");
 define("PUT", "PUT");

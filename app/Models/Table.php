@@ -17,10 +17,9 @@ class Table extends Model
             $key = static::$redis_key . md5(json_encode($condition) . json_encode($list_filter) . json_encode($list_search) . json_encode($contain));
         }
 
-        if (Redis::exists($key)) {
+        if (APP_CACHE && Redis::exists($key)) {
             $ans = unserialize(Redis::get($key));
         } else {
-            sleep(3);
             $query = self::query()->with($contain);
 
             if (!empty($condition_table = static::$condition)) {
@@ -56,7 +55,9 @@ class Table extends Model
                 }
             }
             $ans = $query->paginate(LIMIT);
-            Redis::set($key, serialize($ans));
+            if(APP_CACHE){
+                Redis::set($key, serialize($ans));
+            }
         }
         return $ans;
     }
@@ -77,8 +78,11 @@ class Table extends Model
         return $query->first();
     }
 
-    public static function selectALL($condition = [], $contain = [], $select = ["*"])
+    public static function selectALL($condition = [], $contain = [], $select = [], $sort = [])
     {
+        if (empty($select)){
+            $select = ["*"];
+        }
 
         $query = self::query()->with($contain)->select($select);
 
@@ -88,6 +92,16 @@ class Table extends Model
 
         if (!empty($condition)) {
             $query->where($condition);
+        }
+
+        if (!empty($sort)){
+            if (gettype($sort[0]) === "array"){
+                foreach ($sort as $order){
+                    $query->orderBy(...$order);
+                }
+            }else{
+                $query->orderBy(...$sort);
+            }
         }
 
         return $query->get();
@@ -122,7 +136,7 @@ class Table extends Model
 
     private static function clearCache($key = null)
     {
-        if (!empty($key)) {
+        if (APP_CACHE && !empty($key)) {
 
             $connection = Redis::connection("cache"); // Kết nối Redis cache
             $cursor = ""; // Bắt đầu từ con trỏ 0
@@ -131,8 +145,6 @@ class Table extends Model
             foreach ($keys as $keyRedis){
                 Redis::del(str_replace("laravel_database_", "", $keyRedis));
             }
-
         }
-
     }
 }

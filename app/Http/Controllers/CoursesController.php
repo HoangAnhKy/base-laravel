@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreCourseDetailRequest;
 use App\Jobs\registerCouser;
 use App\Library\CourseLibrary;
+use App\Library\NotificationLibrary;
 use App\Library\UserLibrary;
 use App\Models\CourseDetail;
 use App\Models\Courses;
@@ -122,6 +123,27 @@ class CoursesController extends Controller
             return view("Course.viewDetail", compact("course_detail", "student"));
         }
         return redirect()->route("courses.index")->with("error", "Cannot find Course");
+    }
+
+    public function APIReadnotification (Request $request){
+        $notification = new NotificationLibrary();
+
+        $reponse = [
+            "status" => 400,
+            "link" => "",
+            "messenger" => "Can not find this notification",
+        ];
+
+        if ($data = $notification->readNotification($request->all())){
+
+            $reponse = [
+                "status" => 200,
+                "link" => $data,
+                "messenger" => "",
+            ];
+        }
+
+        return response()->json($reponse, $reponse["status"]);
     }
 
 }
