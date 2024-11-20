@@ -29,6 +29,8 @@ Route::group(["prefix" => "/course", "middleware" => checkAUTH::class], function
     Route::match(['get', 'post'],"/register/{course}", [CoursesController::class, "register"])->name("courses.register");
     Route::get("/course-detail/{course}", [CoursesController::class, "viewDetail"])->name("courses.view-detail");
     Route::get("/check-student-in-course", [CoursesController::class, "checkStudentInCourse"])->name("courses.check-student");
+    Route::get("/export-course/{course}", [CoursesController::class, "exportCourse"])->name("courses.export-course");
+    Route::post("/import-course", [CoursesController::class, "importCourse"])->name("courses.import-course");
 });
 
 Route::fallback(function (){

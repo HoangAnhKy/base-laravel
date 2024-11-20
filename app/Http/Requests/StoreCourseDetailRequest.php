@@ -40,7 +40,7 @@ class StoreCourseDetailRequest extends FormRequest
      */
     public function rules(): array
     {
-        $course_id = $this->course;
+        $course_id = $this->course ?? $this->course_id ?? null;
         return [
             "course_id" => [Rule::exists(Courses::class, "id")],
             "student_id" => [

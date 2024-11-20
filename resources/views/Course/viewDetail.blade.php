@@ -6,6 +6,12 @@
         <p style="font-size: 23px;"><b>Teacher:</b> {{$course_detail->teacher->name_user}}</p>
     </div>
     <div class="card">
+
+        @if( isset(auth()->user()->position) && in_array(auth()->user()->position, [TEACHER], false))
+        <div class="bg-white card-header">
+            <a class="btn btn-success" href="{{ route("courses.export-course", ["course" => $course_detail->id]) }}"> <i class="fa-solid fa-file-export"></i> Export Excel</a>
+        </div>
+        @endif
         <div class="card-body">
             <table class="table table-striped">
                 <thead>

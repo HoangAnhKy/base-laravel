@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\CourseDetailExport;
 use App\Http\Requests\StoreCourseDetailRequest;
+use App\Imports\CourseDetailImport;
 use App\Jobs\registerCouser;
 use App\Library\CourseLibrary;
 use App\Library\NotificationLibrary;
@@ -15,6 +17,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redis;
 use Illuminate\Validation\Rule;
+use Maatwebsite\Excel\Facades\Excel;
 
 class CoursesController extends Controller
 {
@@ -85,12 +88,13 @@ class CoursesController extends Controller
     }
 
 
-    public function register($course = null, StoreCourseDetailRequest $request){
+    public function register($course = null, StoreCourseDetailRequest $request)
+    {
         if (isset($course) && is_numeric($course)) {
 
             try {
 
-                $teacher_id = Courses::selectOne(["id" => $course],[], ["teacher_id"])->teacher_id ?? null;
+                $teacher_id = Courses::selectOne(["id" => $course], [], ["teacher_id"])->teacher_id ?? null;
                 $lockKey = "register_course_lock_{$course}_{$request["student_id"]}";
 
                 $lock = Redis::set($lockKey, true, 'EX', 60, 'NX');
@@ -110,11 +114,13 @@ class CoursesController extends Controller
         return redirect()->route("courses.index")->with("error", "Cannot find Course");
     }
 
-    public function checkStudentInCourse(Request $request){
+    public function checkStudentInCourse(Request $request)
+    {
         return $this->lib_course->checkStudentInCourse($request);
     }
 
-    public function viewDetail($course = null){
+    public function viewDetail($course = null)
+    {
         if (isset($course) && is_numeric($course)) {
             $condition = [["id", $course]];
             $contain = ["teacher", "student"];
@@ -125,7 +131,8 @@ class CoursesController extends Controller
         return redirect()->route("courses.index")->with("error", "Cannot find Course");
     }
 
-    public function APIReadnotification (Request $request){
+    public function APIReadnotification(Request $request)
+    {
         $notification = new NotificationLibrary();
 
         $reponse = [
@@ -134,7 +141,7 @@ class CoursesController extends Controller
             "messenger" => "Can not find this notification",
         ];
 
-        if ($data = $notification->readNotification($request->all())){
+        if ($data = $notification->readNotification($request->all())) {
 
             $reponse = [
                 "status" => 200,
@@ -146,4 +153,33 @@ class CoursesController extends Controller
         return response()->json($reponse, $reponse["status"]);
     }
 
+    public function exportCourse($course)
+    {
+        if (isset($course) && is_numeric($course)) {
+
+            $course = Courses::find($course);
+
+            if (!empty($course)) {
+                return Excel::download(new CourseDetailExport($course->id), "download course " . $course->name_course . '.xlsx');
+            }
+
+        }
+        return redirect()->route("courses.index")->with("error", "Cannot find Course");
+    }
+
+    public function importCourse(Request $request)
+    {
+        if (!empty($file = $request->file("file-import"))){
+            $import = new CourseDetailImport();
+            Excel::import($import, $file);
+            $error = $import->getErrors(); // dùng để trả về người dùng lỗi trong file import
+            $mess = 'Import success!';
+            if (!empty($error)){
+                $mess =  'Import success. But file have ' . count($error) . " errors";
+            }
+            return redirect()->back()->with('success', $mess);
+
+        }
+        return redirect()->back()->with("error", "Cannot import Course");
+    }
 }

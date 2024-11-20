@@ -3,7 +3,11 @@
 @section('content')
     <h2 class="mb-4">Create New Course</h2>
 
-
+    <form action="{{ route("courses.import-course") }}" id="table-import" method="post" enctype="multipart/form-data">
+        @csrf
+        <label class="btn btn-primary" for="import">File import</label>
+        <input class="d-none" id="import" name="file-import" type="file">
+    </form>
 
     <form action="{{ route('courses.store') }}" method="POST">
         @csrf
@@ -31,3 +35,11 @@
         <button type="submit" class="btn btn-success form-control">Create Course</button>
     </form>
 @endsection
+
+@push("js")
+    <script>
+        $("#import").change(function () {
+            $("#table-import").submit();
+        })
+    </script>
+@endpush

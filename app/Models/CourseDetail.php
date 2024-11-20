@@ -13,6 +13,6 @@ class CourseDetail extends Table
     }
 
     public function student(){
-        return $this->hasMany(Users::class, "id", "student_id");
+        return $this->hasOne(Users::class, "id", "student_id");
     }
 }
