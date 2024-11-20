@@ -31,6 +31,8 @@ Route::group(["prefix" => "/course", "middleware" => checkAUTH::class], function
     Route::get("/check-student-in-course", [CoursesController::class, "checkStudentInCourse"])->name("courses.check-student");
     Route::get("/export-course/{course}", [CoursesController::class, "exportCourse"])->name("courses.export-course");
     Route::post("/import-course", [CoursesController::class, "importCourse"])->name("courses.import-course");
+    Route::get('/download-error-file', [CoursesController::class, 'downloadErrorFile'])->name('download.error.file');
+
 });
 
 Route::fallback(function (){

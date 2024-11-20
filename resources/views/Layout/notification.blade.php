@@ -8,6 +8,10 @@
 @if( session()->has("success") )
     <div class="alert alert-success">
         {{ session()->get("success") }}
+        @if(session('error_file'))
+            <br>
+            <a href="{{ route('download.error.file', ['file' => session('error_file')]) }}">Download Errors File</a>
+        @endif
     </div>
 @endif
 

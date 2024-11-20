@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\CourseDetailErrorsExport;
 use App\Exports\CourseDetailExport;
 use App\Http\Requests\StoreCourseDetailRequest;
 use App\Imports\CourseDetailImport;
@@ -16,6 +17,7 @@ use App\Http\Requests\UpdateCoursesRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redis;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rule;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -173,13 +175,32 @@ class CoursesController extends Controller
             $import = new CourseDetailImport();
             Excel::import($import, $file);
             $error = $import->getErrors(); // dùng để trả về người dùng lỗi trong file import
-            $mess = 'Import success!';
             if (!empty($error)){
                 $mess =  'Import success. But file have ' . count($error) . " errors";
+                $filePath = 'temp/import_errors_' . time() . '.xlsx';
+                Excel::store(new CourseDetailErrorsExport($error), $filePath, 'local');
+
+                return redirect()->back()->with([
+                    'success' => $mess,
+                    'error_file' => $filePath,
+                ]);
             }
-            return redirect()->back()->with('success', $mess);
+
+            return redirect()->back()->with('success', 'Import success!');
 
         }
         return redirect()->back()->with("error", "Cannot import Course");
     }
+
+    public function downloadErrorFile(Request $request)
+    {
+        $file = $request->get('file');
+
+        if (Storage::exists($file)) {
+            return response()->download(storage_path('app/private/' . $file))->deleteFileAfterSend(true);
+        }
+
+        return redirect()->back()->with('error', 'File not found.');
+    }
+
 }
