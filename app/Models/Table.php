@@ -147,4 +147,42 @@ class Table extends Model
             }
         }
     }
+
+    private function whereCustom($query, $condition_default)
+    {
+        if (!empty($condition_default)) {
+            $match = $condition_default;
+            $or = [];
+            $contain = [];
+
+            if (!empty($match["OR"])) {
+                $or = $match["OR"];
+                unset($match["OR"]);
+            }
+
+            if (!empty($match["CONTAIN"])) {
+                $contain = $match["CONTAIN"];
+                unset($match["CONTAIN"]);
+            }
+
+            $query->where($match)->where(function ($q) use ($or) {
+                if (!empty($or)) {
+                    $q->where(...array_shift($or));
+                    foreach ($or as $condition) {
+                        $q->orWhere(...$condition);
+                    }
+                }
+            });
+
+            if (!empty($contain)) {
+                foreach ($contain as $table_key => $condition_table) {
+                    $query->whereHas($table_key, function ($q) use ($condition_table) {
+                        $this->whereCustom($q, $condition_table); // backtrack
+                    });
+                }
+            }
+        }
+
+        return $query;
+    }
 }
