@@ -1,9 +1,5 @@
 # Template [link](https://github.com/yelocode/bootstrap5-twitter-clone-template/blob/main/index.html)
 
+# Mail [mailtrap](https://mailtrap.io/inboxes/3373504/messages/4642964749)
 
-# Day 1
-- CRUD IDEAS, Pagiante, view
-
-# Day 2
-
-- CURD comment, auth
+# có CRUD, route, load lazy paginate search relation ship
