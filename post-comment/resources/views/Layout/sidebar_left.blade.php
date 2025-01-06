@@ -11,6 +11,11 @@
             </li>
         </ul>
     </div>
+    <div class="card-body py-2">
+        <p>Lang: {{ __("idea.test_localization")}}</p>
+        <a class="btn btn-link btn-sm" href="{{ route("language", "en") }}">en </a>
+        <a class="btn btn-link btn-sm" href="{{ route("language", "vn") }}">vn </a>
+    </div>
     <div class="card-footer text-center py-2">
         <a class="btn btn-link btn-sm" href="{{ route("profile", auth()->id()) }}">View Profile </a>
     </div>

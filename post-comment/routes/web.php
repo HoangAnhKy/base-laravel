@@ -6,13 +6,14 @@ use App\Http\Controllers\FeedController;
 use App\Http\Controllers\IdeasController;
 use App\Http\Controllers\UsersController;
 use App\Http\Middleware\AdminPage;
+use App\Http\Middleware\lang;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', [IdeasController::class, "index"])->name("dashboard");
-Route::get('/view/{idea}', [IdeasController::class, "show"])->name("show-ideas"); // modal binding
+Route::get('/', [IdeasController::class, "index"])->name("dashboard")->middleware([lang::class]);
+Route::get('/view/{idea}', [IdeasController::class, "show"])->name("show-ideas")->middleware([lang::class]); // modal binding
 
-Route::group(["middleware" => "auth:web"], function () {
+Route::group(["middleware" => ["auth:web", lang::class]], function () {
 
     Route::post('/save-ideas', [IdeasController::class, "save"])->name("save-ideas");
     Route::get('/update/{idea}', [IdeasController::class, "edit"])->name("edit-ideas"); // modal binding
@@ -34,7 +35,7 @@ Route::group(["middleware" => "auth:web"], function () {
     Route::get("/feed", FeedController::class)->name("feed");
 });
 
-Route::group(["prefix" => "/"], function () {
+Route::group(["prefix" => "/", "middleware" => [lang::class]], function () {
     Route::get("/register", [UsersController::class, "formRegister"])->name("register");
     Route::get("/login", [UsersController::class, "formLogin"])->name("login");
     Route::get("/logout", [UsersController::class, "logout"])->name("logout");
@@ -42,4 +43,9 @@ Route::group(["prefix" => "/"], function () {
     Route::post("/handle-login", [UsersController::class, "handleLogin"])->name("handleLogin");
 });
 
-Route::get("/admin", [AdminDashBoard::class, "index"])->name("admin-dashboard.index")->middleware(["auth:web"]);
+Route::get("/admin", [AdminDashBoard::class, "index"])->name("admin-dashboard.index")->middleware(["auth:web", lang::class]);
+
+Route::get('language/{locale}', function ($locale) {
+    session(['locale' => $locale]);
+    return redirect()->back();
+})->name("language");
