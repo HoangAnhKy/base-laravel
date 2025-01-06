@@ -15,7 +15,8 @@
                 @if( !$isView )
                     <div>
                         <div class="row">
-                            @if( auth()->id() === $idea->userPost->id)
+
+                            @can("update", $idea)
                                 <a href="{{ route("show-ideas", $idea->id) }}" class="col-4"><i
                                         class="fa-solid fa-eye"></i></a>
                                 <a href="{{ route("edit-ideas", $idea->id) }}" class="col-4"><i
@@ -26,7 +27,7 @@
                                     @method('DELETE')
                                     <button class="btn btn-danger btn-sm"> X</button>
                                 </form>
-                            @endif
+                            @endcan
                         </div>
                     </div>
                 @endif
@@ -51,14 +52,16 @@
                             <div class="mt-3">
                                 <form action="{{ route("user-unlike", $idea->id) }}" method="post">
                                     @csrf
-                                    <button class="border-0 bg-white"> <span class="fas fa-heart me-1"></span> {{ $idea->likes_count ?? 0 }}</button>
+                                    <button class="border-0 bg-white"><span
+                                            class="fas fa-heart me-1"></span> {{ $idea->likes_count ?? 0 }}</button>
                                 </form>
                             </div>
                         @else
                             <div class="mt-3">
                                 <form action="{{ route("user-like", $idea->id) }}" method="post">
                                     @csrf
-                                    <button class="border-0 bg-white"> <span class="far fa-heart me-1"></span> {{ $idea->likes_count ?? 0 }}</button>
+                                    <button class="border-0 bg-white"><span
+                                            class="far fa-heart me-1"></span> {{ $idea->likes_count ?? 0 }}</button>
                                 </form>
                             </div>
                         @endif
@@ -66,7 +69,7 @@
                 </div>
                 <div>
                     <span class="fs-6 fw-light text-muted">
-                        <span class="fas fa-clock"> </span> {{$idea->created_at}}
+                        <span class="fas fa-clock"> </span> {{ $idea->created_at->diffForHumans() }}
                     </span>
                 </div>
             </div>

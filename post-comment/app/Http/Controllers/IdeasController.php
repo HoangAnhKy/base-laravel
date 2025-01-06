@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ValidateIdeas;
 use App\Models\Ideas;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Log;
 
 class IdeasController extends Controller
@@ -33,6 +34,7 @@ class IdeasController extends Controller
 
     public function save(ValidateIdeas $req)
     {
+        Gate::authorize("create", Ideas::class);
         if ($req->isMethod("POST") && Ideas::query()->create($req->validated())) {
             return redirect()->back()->with("success", "Idea created Successfully");
         }
@@ -45,10 +47,11 @@ class IdeasController extends Controller
             "msg" => "Delete Ideas fail",
         ];
 
+        Gate::authorize("update", Ideas::query()->find($idea));
         try {
             if ($req->isMethod("PUT") && !empty($idea) && is_numeric($idea)) {
                 $idea = Ideas::query()->where("id", $idea)->firstOrFail();
-                if (auth()->id() !== $idea->id){
+                if (auth()->id() !== $idea->user_id){
                     $res["msg"] = "permission define";
                 }else if ($idea->update($req->validated())) {
                     $res = [
@@ -60,7 +63,7 @@ class IdeasController extends Controller
             }
         } catch (\Exception $e) {
             Log::error($e->getMessage());
-            $res["msg"] = "Can not find this idea";
+            $res["msg"] = $e->getMessage();
         }
         return redirect()->back()->with($res["status"], $res["msg"]);
 
@@ -79,7 +82,7 @@ class IdeasController extends Controller
     public function edit(Ideas $idea)
     {
         if (!empty($idea)) {
-            if (auth()->id() !== $idea->id){
+            if (auth()->id() !== $idea->user_id){
                 return redirect()->back()->with("error", "permission define");
             }
             return view("page.edit", compact("idea"));
@@ -95,7 +98,7 @@ class IdeasController extends Controller
         try {
             if (!empty($id) && is_numeric($id)) {
                 $idea = Ideas::query()->where("id", $id)->firstOrFail();
-                if (auth()->id() !== $idea->id){
+                if (auth()->id() !== $idea->user_id){
                     $res["msg"] = "permission define";
                 }else if ($idea->delete()) {
                     $res = [

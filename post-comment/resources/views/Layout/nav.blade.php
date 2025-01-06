@@ -18,7 +18,9 @@
                 @endguest
                 @auth()
                     <li class="nav-item">
-                        <a class="nav-link {{ Route::is("profile") ? "active bg-secondary text-dark" : "" }}" href="{{ route("profile", auth()->user()->id) }}">{{ auth()->user()->name }}</a>
+                        <a class="nav-link {{ Route::is("profile") ? "active bg-secondary text-dark" : "" }}" href="{{ route("profile", auth()->user()->id) }}">
+                            {{ auth()->user()->name }} @if(auth()->user()->is_admin) <sup>(Admin)</sup> @endif
+                        </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/logout">Logout</a>

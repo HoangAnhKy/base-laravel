@@ -1,8 +1,11 @@
 <?php
 
+use App\Http\Controllers\AdminDashBoard;
 use App\Http\Controllers\CommentsController;
+use App\Http\Controllers\FeedController;
 use App\Http\Controllers\IdeasController;
 use App\Http\Controllers\UsersController;
+use App\Http\Middleware\AdminPage;
 use Illuminate\Support\Facades\Route;
 
 
@@ -27,6 +30,8 @@ Route::group(["middleware" => "auth:web"], function () {
     //like
     Route::post("/like/{idea}", [UsersController::class, "like"])->name("user-like");
     Route::post("/unlike/{idea}", [UsersController::class, "unlike"])->name("user-unlike");
+    // Feed
+    Route::get("/feed", FeedController::class)->name("feed");
 });
 
 Route::group(["prefix" => "/"], function () {
@@ -37,3 +42,4 @@ Route::group(["prefix" => "/"], function () {
     Route::post("/handle-login", [UsersController::class, "handleLogin"])->name("handleLogin");
 });
 
+Route::get("/admin", [AdminDashBoard::class, "index"])->name("admin-dashboard.index")->middleware(["auth:web"]);
