@@ -34,9 +34,13 @@ class IdeasController extends Controller
 
     public function save(ValidateIdeas $req)
     {
-        Gate::authorize("create", Ideas::class);
-        if ($req->isMethod("POST") && Ideas::query()->create($req->validated())) {
-            return redirect()->back()->with("success", "Idea created Successfully");
+        try {
+            Gate::authorize("create", Ideas::class);
+            if ($req->isMethod("POST") && Ideas::query()->create($req->validated())) {
+                return redirect()->back()->with("success", "Idea created Successfully");
+            }
+        }catch (\Exception $e){
+            dd($e->getMessage());
         }
     }
 

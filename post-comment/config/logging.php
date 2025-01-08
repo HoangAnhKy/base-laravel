@@ -127,6 +127,12 @@ return [
             'path' => storage_path('logs/laravel.log'),
         ],
 
+        'cache_log' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/cache_log.log'),
+            'level' => 'info', // Mức log (debug, info, notice, warning, error, critical, alert, emergency)
+            'ignore_exceptions' => true,
+        ],
     ],
 
 ];

@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Cache;
 
 class Ideas extends Model
 {
@@ -12,11 +13,10 @@ class Ideas extends Model
 
     protected static function booted()
     {
-        if (auth()->check()){
-            static::creating(function ($model) {
-                $model->user_id = auth()->id();
-            });
-        }
+        static::creating(function ($model) {
+            $model->user_id = auth()->id();
+            Cache::forget('topUser');
+        });
     }
 
     public function comments(){
