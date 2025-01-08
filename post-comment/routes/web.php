@@ -43,9 +43,22 @@ Route::group(["prefix" => "/", "middleware" => [lang::class]], function () {
     Route::post("/handle-login", [UsersController::class, "handleLogin"])->name("handleLogin");
 });
 
-Route::get("/admin", [AdminDashBoard::class, "index"])->name("admin-dashboard.index")->middleware(["auth:web", lang::class]);
+Route::group(["prefix" => "/admin", "middleware" => ["auth:web", "can:admin", lang::class], "as" => "admin-dashboard."], function () {
+    Route::get("/", [AdminDashBoard::class, "index"])->name("index");
+    Route::get("/users", [AdminDashBoard::class, "user"])->name("user");
+    Route::get("/ideas", [AdminDashBoard::class, "ideas"])->name("ideas");
+    Route::get("/comments", [AdminDashBoard::class, "comments"])->name("comment");
+});
 
 Route::get('language/{locale}', function ($locale) {
     session(['locale' => $locale]);
     return redirect()->back();
 })->name("language");
+
+Route::fallback(function () {
+    return response()->view('errors.404', [], 404);
+})->name('404');
+
+Route::fallback(function () {
+    return response()->view('errors.403', [], 404);
+})->name('403');

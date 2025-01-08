@@ -20,4 +20,8 @@ class Comments extends Model
     public function userComment(){
         return $this->belongsTo(User::class, "user_id", "id");
     }
+
+    public function idea(){
+        return $this->hasOne(Ideas::class, "id", "idea_id");
+    }
 }
