@@ -27,8 +27,9 @@ class RegisterUser extends Component
         if (!empty($this->image)){
             $validate["image"] = $this->image->store("upload", "public");
         }
-        User::create($validate);
+        $user = User::create($validate);
         $this->reset();
+        $this->dispatch("load-user", $user);
     }
 
 
