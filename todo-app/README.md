@@ -11,3 +11,9 @@ Làm CRUD:
 
 - Component : [`App\Livewire\RegisterUser`](./app/Livewire/RegisterUser.php)
 - View: [`views\livewire\register-user`](./resources/views/livewire/register-user.blade.php)
+
+# Event, poll and Lazy load
+
+
+- Component : [`App\Livewire\ViewUser`](./app/Livewire/ViewUser.php)
+- View: [`views\livewire\register-user`](./resources/views/livewire/register-user.blade.php)
