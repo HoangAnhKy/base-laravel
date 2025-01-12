@@ -77,6 +77,10 @@ class TodoList extends Component
         $this->edit();
     }
 
+    public function mount($q){
+        $this->search = $q;
+    }
+
 
     public function render()
     {

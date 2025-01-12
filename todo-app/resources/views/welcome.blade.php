@@ -25,7 +25,7 @@
             </header>
         </div>
     </div>
-    @livewire("todo-list")
+    @livewire("todo-list", ["q" => "laravel"])
 </body>
 
 </html>
