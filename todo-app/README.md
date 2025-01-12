@@ -6,3 +6,8 @@ Làm CRUD:
 
 - Component : [`App\Livewire\TodoList`](./app/Livewire/TodoList.php)
 - View: [`views\livewire\ToDo`](./resources/views/livewire/ToDo)
+
+# Upload image
+
+- Component : [`App\Livewire\RegisterUser`](./app/Livewire/RegisterUser.php)
+- View: [`views\livewire\register-user`](./resources/views/livewire/register-user.blade.php)
