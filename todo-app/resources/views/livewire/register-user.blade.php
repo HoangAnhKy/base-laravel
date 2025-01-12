@@ -49,8 +49,13 @@
         </div>
 
         <!-- Submit Button -->
+
+        <div wire:loading.delay.longest  class="text-green-500 text-xs">
+            Sending ...
+        </div>
+
         <div>
-            <button type="submit"
+            <button type="submit" wire:loading.attr="disabled"
                     class="mt-4 w-full bg-teal-500 text-white font-medium py-2 px-4 rounded hover:bg-teal-600 flex justify-center items-center">
                 Create +
             </button>
