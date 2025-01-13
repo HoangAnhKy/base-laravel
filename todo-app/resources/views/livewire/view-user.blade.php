@@ -11,7 +11,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach ($users as $user)
+                @foreach ($this->users as $user)
                     <tr class="border-b hover:bg-gray-100">
                         <td class="py-3 px-6 text-sm text-gray-700">{{ $user->name }}</td>
                         <td class="py-3 px-6 text-sm text-gray-700">{{ $user->email }}</td>
@@ -20,7 +20,7 @@
                 @endforeach
                 </tbody>
             </table>
-            {{ $users->links() }}
+            {{ $this->users->links() }}
         </div>
     </div>
 </div>
