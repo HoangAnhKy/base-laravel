@@ -21,10 +21,11 @@ class RegisterUser extends Component
     #[Rule("nullable")]
     public $image;
 
-    public function createUser(){
+    public function createUser()
+    {
         $validate = $this->validate();
 
-        if (!empty($this->image)){
+        if (!empty($this->image)) {
             $validate["image"] = $this->image->store("upload", "public");
         }
         $user = User::create($validate);
@@ -32,6 +33,15 @@ class RegisterUser extends Component
         $this->dispatch("load-user", $user);
     }
 
+    public function removeUser($id_user)
+    {
+        try {
+            $user = User::query()->findOrFail($id_user);
+            $user->delete();
+        } catch (\Exception $e) {
+            dd($e->getMessage());
+        }
+    }
 
 
     public function render()

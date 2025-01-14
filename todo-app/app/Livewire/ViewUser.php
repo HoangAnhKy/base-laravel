@@ -11,13 +11,16 @@ use Livewire\WithPagination;
 class ViewUser extends Component
 {
     use WithPagination;
-
+    public $sortDate;
     public function placeholder(){
         return view("livewire.Skeleton.plachoder-view-user");
     }
 
     #[Computed()]
     public function users(){
+        if (!empty($this->sortDate) && $this->sortDate === "asc"){
+            return User::query()->orderBy("name", "asc")->paginate(2);
+        }
         return User::query()->latest()->paginate(2);
     }
 
